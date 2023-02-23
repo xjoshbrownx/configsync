@@ -1,0 +1,297 @@
+/*
+ *******************************************
+ *░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*
+ *░░█▀█░█░░░█░█░█▀▀░░░█░█░█░░░▀█▀░█▀▄░█▀█░░*
+ *░░█▀▀░█░░░█░█░▀▀█░░░█░█░█░░░░█░░█▀▄░█▀█░░*
+ *░░▀░░░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░░▀░░▀░▀░▀░▀░░*
+ *░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*
+ *******************************************
+ */
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: SourceCodePro;
+	font-size: 14px;
+	min-height: 26px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+    margin-top: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+	border-radius: 26px;
+	transition: none;
+    color: transparent;
+	background: transparent;
+}
+
+window#waybar.termite #window,
+window#waybar.Firefox #window,
+window#waybar.Navigator #window,
+window#waybar.PCSX2 #window {
+    color: #4d4d4d;
+	background: #e6e6e6;
+}
+
+#workspaces {
+	margin-top: 8px;
+	margin-left: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	/*background: #282a36;*/
+	background: #EBD234;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: #4d4d4d;
+	background: transparent;
+	font-size: 16px;
+}
+
+#workspaces button.focused {
+	color: #2b2b2b;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #ff35a2;
+}
+
+#mpd {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	background: #EBD234;
+	transition: none;
+	color: #4d4d4d;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+	color: #4d4d4d;
+	background: #EBD234;
+}
+
+#bluetooth {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#network {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#network.disconnected {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #FF4444;
+}
+
+#idle_inhibitor {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+
+#idle_inhibitor.activated {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #EBD234;
+	color: #4d4d4d;
+}
+
+#pulseaudio {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 16px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#pulseaudio.muted {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 16px;
+	transition: none;
+	background: #4d4d4d;
+	color: #FF4444;
+}
+
+#backlight {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#battery {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#battery.critical {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #FF4444;
+	color: #DDDDDD;
+}
+
+#temperature {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#temperature.critical {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #DDDDDD;
+	color: #FF4444;
+}
+
+#cpu {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#memory {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #EBD234;
+}
+
+#memory.warning {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #4d4d4d;
+	color: #FF4444;
+}
+
+
+#memory.critical {
+	margin-top: 8px;
+	margin-left: 4px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	background: #FF4444;
+	color: #DDDDDD;
+}
+
+#clock {
+	margin-top: 8px;
+	margin-left: 4px;
+	margin-right: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: #EBD234;
+	background: #4d4d4d;
+}
+
